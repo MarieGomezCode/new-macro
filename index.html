@@ -110,7 +110,7 @@
             animation: bounceIn 1s ease-out;
         }
 
-        /* Slide 2 - El Problema */
+        /* Slide 2 - Problema Combinado */
         #slide2 {
             background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
         }
@@ -125,15 +125,16 @@
             letter-spacing: 1px;
         }
 
-        .problem-container {
+        .combined-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
             max-width: 1200px;
+            margin-bottom: 40px;
         }
 
-        .problem-card {
+        .combined-card {
             background: white;
             border-radius: 15px;
             padding: 30px;
@@ -143,40 +144,35 @@
             transition: transform 0.3s ease;
         }
 
-        .problem-card:hover {
+        .combined-card:hover {
             transform: translateY(-10px);
         }
 
-        .problem-card.red {
+        .combined-card.red {
             border-left-color: #a51c30;
         }
 
-        .problem-icon {
+        .combined-icon {
             font-size: 50px;
             margin-bottom: 20px;
             color: #418fde;
         }
 
-        .problem-card.red .problem-icon {
+        .combined-card.red .combined-icon {
             color: #a51c30;
         }
 
-        .problem-title {
+        .combined-title {
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 15px;
             color: #333;
         }
 
-        .problem-text {
+        .combined-text {
             font-size: 18px;
             line-height: 1.6;
             color: #555;
-        }
-
-        /* Slide 3 - Gráfica */
-        #slide3 {
-            background: linear-gradient(135deg, #f1f3f5 0%, #e9ecef 100%);
         }
 
         .chart-container {
@@ -186,7 +182,6 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             max-width: 900px;
             width: 100%;
-            margin-bottom: 30px;
         }
 
         .chart-title {
@@ -205,23 +200,40 @@
             margin-top: 20px;
         }
 
-        /* Slide 4 - Impacto Macroeconómico */
-        #slide4 {
-            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+        /* Slide 3 - Impacto y Solución */
+        #slide3 {
+            background: linear-gradient(135deg, #f1f3f5 0%, #e9ecef 100%);
+        }
+
+        .impact-solution-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .impact-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .solution-section {
+            flex: 1;
+            min-width: 300px;
         }
 
         .impact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1000px;
-            width: 100%;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
 
         .impact-item {
             background: white;
             border-radius: 12px;
-            padding: 25px;
+            padding: 20px;
             display: flex;
             align-items: center;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
@@ -233,61 +245,55 @@
         }
 
         .impact-icon {
-            font-size: 40px;
-            margin-right: 20px;
+            font-size: 35px;
+            margin-right: 15px;
             color: #418fde;
-            min-width: 50px;
+            min-width: 40px;
             text-align: center;
         }
 
         .impact-text {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.5;
             color: #333;
-        }
-
-        /* Slide 5 - Solución */
-        #slide5 {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            text-align: center;
         }
 
         .solution-box {
             background: white;
             border-radius: 15px;
-            padding: 50px;
-            max-width: 900px;
+            padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border: 3px solid #a51c30;
+            height: 100%;
         }
 
         .solution-title {
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 900;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: #a51c30;
         }
 
         .solution-text {
-            font-size: 22px;
-            line-height: 1.7;
+            font-size: 18px;
+            line-height: 1.6;
             color: #333;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .solution-highlight {
             background: linear-gradient(135deg, #a51c30 0%, #8b0000 100%);
             color: white;
-            padding: 15px 30px;
+            padding: 12px 25px;
             border-radius: 30px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
-        /* Slide 6 - Conclusión */
-        #slide6 {
+        /* Slide 4 - Conclusión */
+        #slide4 {
             background: linear-gradient(135deg, #a51c30 0%, #8b0000 100%);
             color: white;
             text-align: center;
@@ -337,17 +343,6 @@
             }
         }
 
-        @keyframes fadeInUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
         .scroll-indicator {
             position: fixed;
             bottom: 30px;
@@ -389,12 +384,12 @@
                 font-size: 28px;
             }
             
-            .problem-container, .impact-grid {
-                grid-template-columns: 1fr;
+            .combined-container, .impact-solution-container {
+                flex-direction: column;
             }
             
             .solution-box {
-                padding: 30px 20px;
+                padding: 20px 15px;
             }
             
             .conclusion-text {
@@ -419,87 +414,73 @@
         <p class="subtitle">How Fiscal Uncertainty Undermines Macroeconomic Stability</p>
     </div>
 
-    <!-- Slide 2: El Problema -->
+    <!-- Slide 2: Problema Combinado con Gráfica -->
     <div class="slide" id="slide2">
-        <h2 class="section-title">The Fiscal Circus</h2>
-        <div class="problem-container">
-            <div class="problem-card">
-                <div class="problem-icon">
+        <h2 class="section-title">The Fiscal Crisis</h2>
+        <div class="combined-container">
+            <div class="combined-card">
+                <div class="combined-icon">
                     <i class='bx bxs-megaphone'></i>
                 </div>
-                <h3 class="problem-title">Information Leaks</h3>
-                <p class="problem-text">Months of continuous budget speculation and unofficial information about potential tax increases created widespread uncertainty.</p>
+                <h3 class="combined-title">Information Leaks</h3>
+                <p class="combined-text">Months of budget speculation created widespread uncertainty before the official presentation.</p>
             </div>
-            <div class="problem-card red">
-                <div class="problem-icon">
+            <div class="combined-card red">
+                <div class="combined-icon">
                     <i class='bx bxs-business'></i>
                 </div>
-                <h3 class="problem-title">Economic Paralysis</h3>
-                <p class="problem-text">Businesses and consumers "hunkered down," delaying investments and major purchases due to fiscal uncertainty.</p>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">
-                    <i class='bx bxs-bar-chart-alt-2'></i>
-                </div>
-                <h3 class="problem-title">Growth Impact</h3>
-                <p class="problem-text">UK economic growth slowed dramatically to just 0.1% in Q3 2024, down from 0.3% in the previous quarter.</p>
+                <h3 class="combined-title">Economic Paralysis</h3>
+                <p class="combined-text">Businesses and consumers delayed investments and purchases due to fiscal uncertainty.</p>
             </div>
         </div>
-    </div>
-
-    <!-- Slide 3: Gráfica -->
-    <div class="slide" id="slide3">
-        <h2 class="section-title">Economic Impact Analysis</h2>
         <div class="chart-container">
-            <h3 class="chart-title">UK GDP Growth Trend (2023-2024)</h3>
+            <h3 class="chart-title">UK GDP Growth Slowed to 0.1% in Q3 2024</h3>
             <canvas id="gdpChart"></canvas>
             <p class="chart-note">Source: Office for National Statistics, UK</p>
         </div>
     </div>
 
-    <!-- Slide 4: Impacto Macroeconómico -->
+    <!-- Slide 3: Impacto y Solución Combinados -->
+    <div class="slide" id="slide3">
+        <h2 class="section-title">Impact & Solutions</h2>
+        <div class="impact-solution-container">
+            <div class="impact-section">
+                <h3 style="color: #a51c30; margin-bottom: 20px; text-align: center;">Macroeconomic Impact</h3>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <i class='bx bxs-shopping-bags impact-icon'></i>
+                        <p class="impact-text"><strong>Aggregate Demand:</strong> Consumer spending frozen due to uncertainty</p>
+                    </div>
+                    <div class="impact-item">
+                        <i class='bx bxs-factory impact-icon'></i>
+                        <p class="impact-text"><strong>Investment:</strong> Business expansion postponed indefinitely</p>
+                    </div>
+                    <div class="impact-item">
+                        <i class='bx bxs-pie-chart-alt-2 impact-icon'></i>
+                        <p class="impact-text"><strong>GDP Performance:</strong> Economic growth flatlined</p>
+                    </div>
+                </div>
+            </div>
+            <div class="solution-section">
+                <div class="solution-box">
+                    <h3 class="solution-title">Policy Recommendations</h3>
+                    <p class="solution-text">According to Andy Haldane, former Bank of England Chief Economist:</p>
+                    <p class="solution-text" style="margin-top: 15px;"><strong>Complete secrecy</strong> in budget preparation</p>
+                    <p class="solution-text">OR</p>
+                    <p class="solution-text"><strong>Genuine open consultation</strong> before final decisions</p>
+                    <div class="solution-highlight">
+                        Current system of leaks serves no one
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Conclusión -->
     <div class="slide" id="slide4">
-        <h2 class="section-title">Macroeconomic Consequences</h2>
-        <div class="impact-grid">
-            <div class="impact-item">
-                <i class='bx bxs-shopping-bags impact-icon'></i>
-                <p class="impact-text"><strong>Aggregate Demand:</strong> Consumer spending frozen due to uncertainty about future disposable income</p>
-            </div>
-            <div class="impact-item">
-                <i class='bx bxs-factory impact-icon'></i>
-                <p class="impact-text"><strong>Investment:</strong> Business expansion and capital investment postponed indefinitely</p>
-            </div>
-            <div class="impact-item">
-                <i class='bx bxs-pie-chart-alt-2 impact-icon'></i>
-                <p class="impact-text"><strong>GDP Performance:</strong> Economic growth flatlined at minimal levels</p>
-            </div>
-            <div class="impact-item">
-                <i class='bx bxs-bank impact-icon'></i>
-                <p class="impact-text"><strong>Fiscal Policy:</strong> Government credibility undermined, reducing policy effectiveness</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 5: Solución -->
-    <div class="slide" id="slide5">
-        <h2 class="section-title">Policy Recommendations</h2>
-        <div class="solution-box">
-            <h3 class="solution-title">Urgent Fiscal Reform Needed</h3>
-            <p class="solution-text">According to Andy Haldane, former Bank of England Chief Economist, the solution requires either:</p>
-            <p class="solution-text" style="margin-top: 20px;"><strong>Complete secrecy</strong> in budget preparation (similar to monetary policy decisions)</p>
-            <p class="solution-text">OR</p>
-            <p class="solution-text"><strong>Genuine open consultation</strong> with stakeholders before final decisions</p>
-            <div class="solution-highlight">
-                The current system of leaks serves no one
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 6: Conclusión -->
-    <div class="slide" id="slide6">
         <p class="conclusion-text">
             <i class='bx bxs-quote-left' style="font-size: 48px; display: block; margin-bottom: 20px;"></i>
-            This case demonstrates that macroeconomic stability requires more than sound policies — it demands predictability and transparency in fiscal management.
+            This case demonstrates that macroeconomic stability requires predictability and transparency in fiscal management.
         </p>
         <div class="key-takeaway">
             Policy Uncertainty = Economic Paralysis
@@ -515,18 +496,17 @@
     </div>
 
     <script>
-        // Gráfica de GDP en barras estilo Excel
+        // Gráfica de GDP simplificada
         const ctx = document.getElementById('gdpChart').getContext('2d');
         const gdpChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Q1 2023', 'Q2 2023', 'Q3 2023', 'Q4 2023', 'Q1 2024', 'Q2 2024', 'Q3 2024'],
+                labels: ['Q1 2024', 'Q2 2024', 'Q3 2024'],
                 datasets: [{
                     label: 'UK GDP Growth (%)',
-                    data: [0.5, 0.4, 0.3, 0.4, 0.3, 0.3, 0.1],
+                    data: [0.3, 0.3, 0.1],
                     backgroundColor: [
-                        '#418fde', '#418fde', '#418fde', '#418fde', 
-                        '#418fde', '#a51c30', '#8b0000'
+                        '#418fde', '#418fde', '#8b0000'
                     ],
                     borderColor: '#333',
                     borderWidth: 1,
@@ -542,19 +522,6 @@
                     tooltip: {
                         mode: 'index',
                         intersect: false
-                    },
-                    // Plugin personalizado para mostrar valores encima de las barras
-                    datalabels: {
-                        anchor: 'end',
-                        align: 'top',
-                        formatter: function(value) {
-                            return value + '%';
-                        },
-                        color: '#333',
-                        font: {
-                            weight: 'bold',
-                            size: 14
-                        }
                     }
                 },
                 scales: {
@@ -579,36 +546,21 @@
                         }
                     }
                 }
-            },
-            plugins: [{
-                id: 'datalabels',
-                afterDatasetsDraw: function(chart) {
-                    const ctx = chart.ctx;
-                    chart.data.datasets.forEach((dataset, i) => {
-                        const meta = chart.getDatasetMeta(i);
-                        if (!meta.hidden) {
-                            meta.data.forEach((element, index) => {
-                                // Dibujar el valor encima de la barra
-                                const value = dataset.data[index];
-                                ctx.fillStyle = '#333';
-                                ctx.textAlign = 'center';
-                                ctx.textBaseline = 'bottom';
-                                ctx.font = 'bold 14px Arial';
-                                
-                                const padding = 5;
-                                const position = element.tooltipPosition();
-                                ctx.fillText(value + '%', position.x, position.y - padding);
-                            });
-                        }
-                    });
-                }
-            }]
+            }
         });
+
+        // Mostrar valores en las barras
+        gdpChart.options.plugins.tooltip.callbacks = {
+            label: function(context) {
+                return context.dataset.label + ': ' + context.parsed.y + '%';
+            }
+        };
+        gdpChart.update();
 
         // Ocultar indicador de scroll en la última diapositiva
         window.addEventListener('scroll', function() {
             const scrollIndicator = document.querySelector('.scroll-indicator');
-            const lastSlide = document.getElementById('slide6');
+            const lastSlide = document.getElementById('slide4');
             const lastSlidePosition = lastSlide.offsetTop;
             const scrollPosition = window.scrollY + window.innerHeight;
             
